@@ -1,3 +1,20 @@
+import org.gradle.api.tasks.Delete
+import org.gradle.kotlin.dsl.*
+
+buildscript {
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10") // ✅ Updated Kotlin version
+        classpath("com.android.tools.build:gradle:7.4.0") 
+        
+             // ✅ Updated Android Gradle plugin
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 allprojects {
     repositories {
         google()
@@ -5,17 +22,19 @@ allprojects {
     }
 }
 
-val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
-rootProject.layout.buildDirectory.value(newBuildDir)
+// Set new unified build directory outside of module
+val newBuildDir = layout.buildDirectory.dir("../../build").get()
+layout.buildDirectory.set(newBuildDir)
 
+// Ensure all subprojects share the same build dir
 subprojects {
-    val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
-    project.layout.buildDirectory.value(newSubprojectBuildDir)
-}
-subprojects {
-    project.evaluationDependsOn(":app")
+    val subprojectBuildDir = newBuildDir.dir(name)
+    layout.buildDirectory.set(subprojectBuildDir)
+
+    evaluationDependsOn(":app")
 }
 
+// Register the clean task
 tasks.register<Delete>("clean") {
-    delete(rootProject.layout.buildDirectory)
+    delete(layout.buildDirectory)
 }
