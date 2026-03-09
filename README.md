@@ -1,4 +1,4 @@
-# meditation_app
+# INNER WAVE
 
 A new Flutter project.
 
