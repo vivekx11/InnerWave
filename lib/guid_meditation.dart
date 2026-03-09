@@ -30,7 +30,7 @@ class _GuidedMeditationPageState extends State<GuidedMeditationPage> {
     final session = await AudioSession.instance;
     await session.configure(const AudioSessionConfiguration.music());
 
-    // Load assets
+    // Load assets.
     await _meditationPlayer.setAsset('assets/audio/meditation.mp3');
     await _relaxationPlayer.setAsset('assets/audio/relaxation.mp3');
     await _bodyCleansePlayer.setAsset('assets/audio/body_cleanse.mp3');
