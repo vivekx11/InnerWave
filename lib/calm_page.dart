@@ -141,7 +141,7 @@ class _CalmPageState extends State<CalmPage> with WidgetsBindingObserver {
     _timer = Timer.periodic(const Duration(seconds: 10), (timer) async {
       final now = TimeOfDay.now();
       final nowAbs = DateTime.now();
-      // Start tasks when time matches
+      // Start tasks when time matches.
       for (int i = 0; i < _tasks.length; i++) {
         var t = _tasks[i];
         if (!t.completed &&
