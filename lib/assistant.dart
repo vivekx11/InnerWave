@@ -16,7 +16,7 @@ class _AssistantPageState extends State<AssistantPage> {
   List<Map<String, String>> messages = [];
   bool _isLoading = false;
 
-  // Google Gemini API key
+  // Google Gemini API key..
   final String geminiApiKey = "AIzaSyD-naPEKtPHIc9Atu9CY0JVNbm7GudSz4M";
 
   @override
