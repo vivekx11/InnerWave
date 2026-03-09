@@ -74,7 +74,7 @@ class _FocusPageState extends State<FocusPage> {
     setState(() => _selectedIndex = index);
 
     if (index == 0) {
-      // Already on home, do nothing
+      // Already on home, do nothing.
     } else {
       Widget? page;
       switch (index) {
