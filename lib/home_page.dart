@@ -144,7 +144,7 @@ class HomePage extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            // Background pattern
+            // Background pattern.
             Positioned(
               top: -20,
               right: -20,
