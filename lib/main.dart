@@ -12,7 +12,7 @@ Future<void> main() async {
   // Initialize Hive
   await Hive.initFlutter();
 
-  // ✅ Open all boxes you’ll need in the app
+  // ✅ Open all boxes you’ll need in the app.
   await Hive.openBox('tasksBox');
   await Hive.openBox('userStreaks');
 
