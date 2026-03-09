@@ -48,7 +48,7 @@ class _DailyDiaryPageState extends State<DailyDiaryPage> {
       title: 'Entry ${_entries.length + 1}',
       content: _noteController.text.trim(),
       timestamp: DateTime.now(),
-      mood: 'neutral', // You can expand this with mood selection
+      mood: 'neutral', // You can expand this with mood selection.
     );
 
     final box = await Hive.openBox('diaryBox');
