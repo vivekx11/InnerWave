@@ -9,7 +9,7 @@ import 'package:flutter/services.dart';
 import 'time_tracking_mixin.dart';
 import 'user_insights.dart';
 
-// --- Session model (inside file!) ---
+// --- Session model (inside file!) -----
 class MeditationSession extends ChangeNotifier {
   int selectedMinutes;
   int remainingSeconds;
