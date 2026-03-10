@@ -4,7 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:provider/provider.dart';
 
-// ------------ Persistent Focus Session Model --------------
+// ------------ Persistent Focus Session Model ----------------
 class FocusSession extends ChangeNotifier {
   int workDuration; // in seconds
   int breakDuration; // in seconds
