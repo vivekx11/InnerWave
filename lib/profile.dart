@@ -64,7 +64,7 @@ class _ProfilePageState extends State<ProfilePage>
 
   @override
   Widget build(BuildContext context) {
-    // Calculate quick stats
+    // Calculate quick stats....
     int totalSessions = sessionHistory.length;
     int totalMinutes = sessionHistory.fold<int>(
       0,
