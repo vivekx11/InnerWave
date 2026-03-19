@@ -30,7 +30,7 @@ class DailyTask {
         'completed': completed,
         'startTime': startTime?.toIso8601String(),
       };
-
+// static 
   static DailyTask fromMap(Map<dynamic, dynamic> map) => DailyTask(
         task: map['task'],
         time: TimeOfDay(hour: map['hour'], minute: map['minute']),
