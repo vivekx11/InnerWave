@@ -29,7 +29,7 @@ class FocusSession extends ChangeNotifier {
     _startCountDown();
     notifyListeners();
   }
-
+// focus
   void _startCountDown() {
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
