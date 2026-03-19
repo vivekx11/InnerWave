@@ -19,7 +19,7 @@ class FocusPage extends StatefulWidget {
   @override
   State<FocusPage> createState() => _FocusPageState();
 }
-
+//home page
 class _FocusPageState extends State<FocusPage> {
   int _selectedIndex = 0;
 
