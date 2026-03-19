@@ -22,7 +22,7 @@ class _AssistantPageState extends State<AssistantPage> {
   @override
   void initState() {
     super.initState();
-    // Add welcome message
+    // Add welcome message.. 
     messages.add({
       "role": "assistant",
       "content": "Hello! I'm your meditation assistant. How can I help you today?"
