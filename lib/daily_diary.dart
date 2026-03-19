@@ -24,7 +24,7 @@ class _DailyDiaryPageState extends State<DailyDiaryPage> {
   Future<void> _loadEntries() async {
     final box = await Hive.openBox('diaryBox');
     final entries = box.get('entries', defaultValue: <dynamic>[]);
-
+// daily
     setState(() {
       _entries.clear();
       for (final entry in entries) {
